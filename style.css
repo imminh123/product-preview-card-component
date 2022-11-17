@@ -1,0 +1,129 @@
+:root {
+  --cyan: hsl(158, 36%, 37%);
+  --cyanDark: hsl(158, 38%, 28%);
+  --cream: hsl(30, 38%, 92%);
+  --blue: hsl(212, 21%, 14%);
+  --grayBlue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --whiteDark: hsl(0, 9%, 96%);
+  --font: 14px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--cream);
+  font-size: var(--font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h3,
+p,
+sub {
+  color: var(--grayBlue);
+}
+
+h3 {
+  font-weight: 500;
+  letter-spacing: 5px;
+  font-size: 14px;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Fraunces", "serif";
+  color: var(--blue);
+  font-size: 35px;
+  line-height: 35px;
+  margin: 14px 0;
+}
+
+.card {
+  border-radius: 10px;
+  margin: auto;
+  max-width: 375px;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.card #coverImage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .content {
+  padding: 26px;
+}
+
+button {
+  background-color: var(--cyan);
+  padding: 15px 5px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  color: var(--whiteDark) !important;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s all;
+  cursor: pointer;
+}
+
+button img {
+  width: 15px;
+  margin-right: 10px;
+}
+
+button:hover {
+    background-color: var(--cyanDark);
+}
+
+.description {
+  line-height: 25px;
+  font-size: 15px;
+}
+
+.price {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 0 0;
+  height: 72px;
+  font-size: 16px;
+}
+
+.price h2 {
+  font-family: "Fraunces", "serif";
+  color: var(--cyan);
+  margin-right: 20px;
+  font-size: 32px;
+}
+
+.price sub {
+  text-decoration: line-through;
+}
+
+@media only screen and (min-width: 375px) {
+  .card {
+    display: flex;
+    max-width: 600px;
+  }
+
+  .card #coverImage {
+    max-width: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .description {
+    margin-bottom: 0;
+  }
+
+  .price {
+    margin-bottom: 5px;
+  }
+}
